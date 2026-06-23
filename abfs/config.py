@@ -7,9 +7,9 @@ import pandas as pd
 import io
 
 # Authenticate
-tenant_id = "04040e37-4101-439a-9e6d-dd85f8a880cb"
-client_id = "9d8f92ef-a39c-4cbb-aaf3-ba31f3d18f25"
-client_secret = "~lj8Q~~EmOWvYXT693mSMY7gQJSgPYRzBSXMudkV"
+tenant_id = "Stored in Notepad Temporarily" # Find way to store securely and then read securely
+client_id = "Stored in Notepad Temporarily" # Find way to store securely and then read securely
+client_secret = "Stored in Notepad Temporarily" # Find way to store securely and then read securely
 account_name = "jtbstorage001"
 
 credential = ClientSecretCredential(tenant_id, client_id, client_secret)
