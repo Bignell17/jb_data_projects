@@ -105,4 +105,3 @@ def read_adls_file_to_df(file_client, file_type="json"):
         raise ValueError("Unable to parse JSON in any known format")
 
     raise ValueError(f"Unsupported file type: {file_type}")
-
