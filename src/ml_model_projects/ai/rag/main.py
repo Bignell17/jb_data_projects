@@ -1,6 +1,6 @@
 from ingest import load_and_chunk
 from vector_store import create_store, search
-from llm import ask_llm
+from ml_model_projects.ai.rag.llm import ask_llm
 import os
 import certifi
 
