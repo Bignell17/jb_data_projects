@@ -8,6 +8,7 @@ Contains 3 areas with the src folder
 3. Scripts
 
 As of 30/06/2026
+
 **Within Integrations**
 1. Automated email
 Uses Azure Service Principal (OAuth) as the connection keys to sign into Microsoft Graph, then has the ability to send emails with or without an attachment to automate report sending using UDF "send_email". Restirctions are put in place to ensure only emails that are within a specific Azure group, that emails can send from.
