@@ -2,6 +2,13 @@
 
 This Repo is used for data projects as a portfolio of my work.
 
+Ideas:
+- Data Quality Framework --> Create UDF that automatically checks: Nulls, duplicates, regex patterns, ranges, foreign keys, date formats, uniqueness and produces a Report (HTML, CSV, JSON)
+- Metadata driven ETL Framework --> Use YAML file where someone simply writes: Source, Destination, Table, Validation
+                                    Framework would: Extract data, validate it, logs everything, has retries failures, loads data to destination, sends alerts
+- Pipeline health Dashboard --> Connect up to ADF, Databricks, Synapse or something similar to see: Pipeline success (%) (Per week/month...), Avg run time, failures, cost, alerts
+- Data Dictionary Generator --> Point it to SQL Server, Snowflake... and it automatically generates Excel file with relationships, descriptions and statistics
+
 Contains 3 areas with the src folder
 1. intergrations
 2. ML Model Projects
