@@ -1,0 +1,41 @@
+sources:
+    copperleaf:
+        active: True
+        source_storage_location: dlz
+        source_container: gt-investment
+        source_directory_path: Copperleaf/ACCOUNT_DIM/
+        allow_same_filename: 'true'
+        tables:
+            account_dim:
+                table_description: 'This table contains support functions related to asset management, financial planning, risk assessment, and project or portfolio management.'
+                landing_file_pattern: ACCOUNT_DIM.csv
+                raw_file_pattern: ACCOUNT_DIM.csv
+                raw_file_format: csv
+                remove_file: 'true'
+                options:
+                    header: 'true'
+                operation_mode: overwrite
+                schema: |
+                    [
+                        StructField('ACCOUNT_DIM_ID', StringType(), True),
+                        StructField('NAME', StringType(), True),
+                        StructField('CODE', StringType(), True),
+                        StructField('TYPE_NAME', StringType(), True),
+                        StructField('NODE_ID', StringType(), True),
+                        StructField('NODE_PATH', StringType(), True),
+                        StructField('PARENT_NAME', StringType(), True),
+                        StructField('PARENT_CODE', StringType(), True),
+                        StructField('IS_INCLUDED_FOR_TOTAL_FORECAST', StringType(), True)
+                    ]
+                columnList: >
+                    ACCOUNT_DIM_ID,
+                    NAME,
+                    CODE,
+                    TYPE_NAME,
+                    NODE_ID,
+                    NODE_PATH,
+                    PARENT_NAME,
+                    PARENT_CODE,
+                    IS_INCLUDED_FOR_TOTAL_FORECAST
+                keys: 'ACCOUNT_DIM_ID'
+                sequence_by: 'sys_insert_time_utc'

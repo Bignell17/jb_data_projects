@@ -1,0 +1,32 @@
+sources:
+    gassco:
+        source_storage_location: dlz
+        source_container: gso-external
+        source_directory_path: GASSCO/gassco_atom_real_time_feed/
+        active: 'true'
+        tables:
+            atom_real_time_feed:
+                table_description: ''
+                landing_file_pattern: gassco_atom_real_time_feed_*.xml
+                raw_file_pattern: gassco_atom_real_time_feed_*.xml
+                raw_file_format: xml
+                options:
+                    rowTag: entry
+                    inferSchema: 'true'
+                operation_mode: append
+                schema: |
+                    [
+                        StructField('author', StructType([StructField('name', StringType(), True)]), True),
+                        StructField('content', DoubleType(), True),
+                        StructField('id', StringType(), True),
+                        StructField('title', StringType(), True),
+                        StructField('updated', TimestampType(), True)
+                    ]
+                columnList: >
+                    content,
+                    title,
+                    updated
+                keys: ''
+                sequence_by: ''
+                transformation_notebooks:
+                    - gassco_atom_real_time_feed_transformations
