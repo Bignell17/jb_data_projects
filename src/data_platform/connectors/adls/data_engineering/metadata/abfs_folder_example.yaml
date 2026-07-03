@@ -1,0 +1,8 @@
+pipeline:
+  name: Customer Pipeline
+
+source:
+  type: abfs_folder
+
+destination:
+  type: raw
